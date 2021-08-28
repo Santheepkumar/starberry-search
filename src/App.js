@@ -35,7 +35,6 @@ function App() {
           <Route path='/login'>
             <Login
               doAuth={(form, redirect) => {
-                console.log(form);
                 if (
                   form.username === "starberry" &&
                   form.password === "strawberry"
