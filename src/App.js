@@ -23,9 +23,12 @@ function App() {
               return login ? <Redirect to='/list' /> : <Redirect to='/login' />;
             }}
           />
-          <Route path='/list'>
-            <List />
-          </Route>
+          <Route
+            path='/list'
+            render={() =>
+              login ? <List  /> : <Redirect to='/login' />
+            }
+          />
           <Route
             path='/detail'
             render={(props) =>
