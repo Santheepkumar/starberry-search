@@ -66,9 +66,6 @@ function List() {
       .catch((err) => console.log("Error list fetch failed"));
   }, [dataLimit]);
 
-  if (list?.status === "loading") {
-    return <div className='text-center'>Loading...</div>;
-  }
   return (
     <>
       <Header />
